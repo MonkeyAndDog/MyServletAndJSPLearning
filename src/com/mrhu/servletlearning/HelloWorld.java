@@ -12,7 +12,10 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class HelloWorld
  */
-@WebServlet("/HelloWorld")
+@WebServlet(
+		name="hello",
+		urlPatterns="/helloworld",
+		loadOnStartup=1)
 public class HelloWorld extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -29,7 +32,7 @@ public class HelloWorld extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		response.setContentType("pdf");
+		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		out.print("<h1>HelloWorld</h1>");
 		out.close();
