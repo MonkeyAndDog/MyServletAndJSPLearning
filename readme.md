@@ -12,7 +12,10 @@
   * lib 库文件，目录名称不可变
   * 导出为 war 文件，然后放到Tomcat的webapp目录下，重启Tomcat后自解压
 ---
+## 请求与响应
+1. HttpServletRequest
+	* getParameter-->获取单个参数
+	* getParameterValues-->获取多个同一name的参数
+	
 未完待续
    
-
-	

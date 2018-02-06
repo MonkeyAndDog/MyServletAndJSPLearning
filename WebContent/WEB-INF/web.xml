@@ -3,7 +3,9 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
     http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
-    version="4.0" metadata-complete="true">
+    version="4.0" metadata-complete="false">
+    
+    <!-- 当混合使用注解还有xml配置文件时，metadata-complete要设置为false -->
     
     <servlet>
 	    <servlet-name>MyServlet</servlet-name>
@@ -11,9 +13,22 @@
 	    <load-on-startup>1</load-on-startup>
     </servlet>
     
+    <!-- 
+    <servlet>
+    	<servlet-name>TestRequest</servlet-name>
+    	<servlet-class>com.mrhu.requestandresponse.TestRequest</servlet-class>
+    </servlet>
+    -->
+    
     <servlet-mapping>
     	<servlet-name>MyServlet</servlet-name>
     	<url-pattern>/myservlet.view</url-pattern>
     </servlet-mapping>
+    <!--  
+    <servlet-mapping>
+    	<servlet-name>TestRequest</servlet-name>
+		<url-pattern>/testRequest</url-pattern>
+	</servlet-mapping>
+	-->
 </web-app>
 
